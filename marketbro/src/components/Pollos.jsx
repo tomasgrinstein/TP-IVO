@@ -1,6 +1,4 @@
 import React from 'react';
-
-// Importar imágenes con extensión .jpeg
 import pollo1 from './pollo1.jpeg';
 import pollo2 from './pollo2.jpeg';
 import pollo3 from './pollo3.jpeg';
@@ -10,35 +8,68 @@ const productos = [
   {
     id: 1,
     nombre: 'Pechuga de Pollo Sin Hueso',
+    descripcion: 'Pechuga de pollo fresca, sin hueso y sin piel. Ideal para preparaciones saludables.',
     imagen: pollo1,
   },
   {
     id: 2,
     nombre: 'Muslos de Pollo',
+    descripcion: 'Muslos de pollo jugosos y tiernos, perfectos para guisos y preparaciones al horno.',
     imagen: pollo2,
   },
   {
     id: 3,
     nombre: 'Alas de Pollo',
+    descripcion: 'Alas de pollo frescas, ideales para barbacoas y preparaciones picantes.',
     imagen: pollo3,
   },
   {
     id: 4,
     nombre: 'Pechuga Rellena de Jamón y Queso',
+    descripcion: 'Pechuga de pollo rellena artesanalmente con jamón y queso, lista para hornear.',
     imagen: pollo4,
   },
 ];
 
 function Pollos() {
   return (
-    <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexWrap: 'wrap',
+        gap: '40px',
+        paddingTop: '40px',
+      }}
+    >
       {productos.map((producto) => (
-        <div key={producto.id} style={{ width: '250px' }}>
+        <div
+          key={producto.id}
+          style={{
+            width: '220px',
+            backgroundColor: '#fff',
+            borderRadius: '12px',
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+            padding: '10px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
+        >
           <img
             src={producto.imagen}
             alt={producto.nombre}
-            style={{ width: '100%', borderRadius: '10px' }}
+            style={{
+              width: '100%',
+              borderRadius: '10px',
+              objectFit: 'cover',
+              marginBottom: '10px',
+            }}
           />
+          <h4 style={{ margin: '0 0 6px 0', textAlign: 'center' }}>{producto.nombre}</h4>
+          <p style={{ fontSize: '14px', textAlign: 'center', color: '#333' }}>
+            {producto.descripcion}
+          </p>
         </div>
       ))}
     </div>
