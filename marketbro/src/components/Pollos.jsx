@@ -9,24 +9,28 @@ const productos = [
     id: 1,
     nombre: 'Pechuga de Pollo Sin Hueso',
     descripcion: 'Pechuga de pollo fresca, sin hueso y sin piel. Ideal para preparaciones saludables.',
+    precio: '$8.99',
     imagen: pollo1,
   },
   {
     id: 2,
     nombre: 'Muslos de Pollo',
     descripcion: 'Muslos de pollo jugosos y tiernos, perfectos para guisos y preparaciones al horno.',
+    precio: '$6.99',
     imagen: pollo2,
   },
   {
     id: 3,
     nombre: 'Alas de Pollo',
     descripcion: 'Alas de pollo frescas, ideales para barbacoas y preparaciones picantes.',
+    precio: '$6.99',
     imagen: pollo3,
   },
   {
     id: 4,
     nombre: 'Pechuga Rellena de Jamón y Queso',
     descripcion: 'Pechuga de pollo rellena artesanalmente con jamón y queso, lista para hornear.',
+    precio: '$15.99',
     imagen: pollo4,
   },
 ];
@@ -70,6 +74,7 @@ function Pollos() {
           <p style={{ fontSize: '14px', textAlign: 'center', color: '#333' }}>
             {producto.descripcion}
           </p>
+          <p style={{ fontWeight: 'bold', color: '#d32f2f', marginTop: '8px' }}>{producto.precio}</p>
         </div>
       ))}
     </div>

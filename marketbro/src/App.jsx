@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import Pollos from './components/Pollos'; // ✅ IMPORTANTE: importar el componente
+import Pollos from './components/Pollos'; 
 import './App.css';
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
           </div>
         </div>
 
-        {/* ✅ Agregamos el componente que muestra las imágenes */}
+        {}
         <Pollos />
       </main>
     </div>
