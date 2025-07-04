@@ -5,10 +5,17 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      
-      {/* Acá vamos a construir el resto de la página */}
+
       <main style={{ padding: '20px' }}>
-        <h2>Nuestros Pollos</h2>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center'
+        }}>
+          <h2>Nuestros Productos</h2>
+          <button className="icon-btn">🛒</button>
+        </div>
+
         {/* Después acá pondremos las tarjetas de productos */}
       </main>
     </div>

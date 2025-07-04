@@ -16,7 +16,6 @@ function Navbar() {
 
       <div className="navbar-right">
         <button className="icon-btn">🔍</button>
-        <button className="icon-btn">🛒</button>
       </div>
     </nav>
   );
