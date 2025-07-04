@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
-import './App.css'; 
+import Pollos from './components/Pollos'; // ✅ IMPORTANTE: importar el componente
+import './App.css';
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -33,7 +34,8 @@ function App() {
           </div>
         </div>
 
-        {}
+        {/* ✅ Agregamos el componente que muestra las imágenes */}
+        <Pollos />
       </main>
     </div>
   );
