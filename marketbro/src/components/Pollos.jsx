@@ -35,7 +35,7 @@ const productos = [
   },
 ];
 
-function Pollos() {
+function Pollos({ agregarAlCarrito }) {
   return (
     <div
       style={{
@@ -75,6 +75,22 @@ function Pollos() {
             {producto.descripcion}
           </p>
           <p style={{ fontWeight: 'bold', color: '#d32f2f', marginTop: '8px' }}>{producto.precio}</p>
+          <button
+            onClick={() => agregarAlCarrito(producto)}
+            style={{
+              backgroundColor: '#c62828',
+              color: 'white',
+              padding: '8px 12px',
+              border: 'none',
+              borderRadius: '6px',
+              marginTop: '10px',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+              fontSize: '14px',
+            }}
+          >
+            Agregar al carrito
+          </button>
         </div>
       ))}
     </div>
