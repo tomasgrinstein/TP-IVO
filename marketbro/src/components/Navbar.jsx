@@ -1,5 +1,5 @@
 import React from 'react';
-import './Navbar.css'; // Importa los estilos
+import '../Navbar.css'; 
 
 function Navbar() {
   return (
@@ -16,7 +16,6 @@ function Navbar() {
 
       <div className="navbar-right">
         <button className="icon-btn">🔍</button>
-        <button className="icon-btn">🛒</button>
       </div>
     </nav>
   );
