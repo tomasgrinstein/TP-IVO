@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Navbar.css'; 
 
 function Navbar() {
+  const [mostrarBuscador, setMostrarBuscador] = useState(false);
+
+  const toggleBuscador = () => {
+    setMostrarBuscador(!mostrarBuscador);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -15,7 +21,16 @@ function Navbar() {
       </div>
 
       <div className="navbar-right">
-        <button className="icon-btn">🔍</button>
+        <button className="icon-btn" onClick={toggleBuscador}>🔍</button>
+
+        {mostrarBuscador && (
+          <input 
+            type="text" 
+            placeholder="Buscar..." 
+            className="input-buscador" 
+            autoFocus
+          />
+        )}
       </div>
     </nav>
   );
